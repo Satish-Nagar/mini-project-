@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Attendance System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('background.png'); /* Change the image path */
+            background-size: cover;
+        }
+
+        .optin {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: -10px;
+            background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+            padding: 20px;
+        }
+
+        .optin a {
+            text-decoration: none;
+        }
+
+        .optin button {
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .optin input {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        /* Add a gap between options */
+        .optin + .optin {
+            margin-top: 20px;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 600px) {
+            .optin button {
+                padding: 16px 32px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>QR Attendance System</h1>
+    </header>
+
+    <main>
+        <div class="optin">
+            <a href="register.html">
+                <button>Professor</button>
+            </a>
+        </div>
+
+        <div class="optin">
+            <a href="Scan.html">
+                <button>Scan</button>
+            </a>
+        </div>
+    </main>
+</body>
+
+</html>

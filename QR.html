@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .student-details {
+            margin-bottom: 20px;
+        }
+
+        .ok-button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .message {
+            margin-top: 20px;
+            color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+   
+
+    <header>
+        <h1>QR Attendance system</h1>
+    </header>
+
+<h1>QR Code Activated</h1>
+
+    <div id="qrCode"></div>
+ 
+
+    <script>
+        function generateQRCode() {
+            const qrCodeContainer = document.getElementById("qrCode");
+            const randomText = Math.random().toString(36).substr(2, 5); // Generate a random text
+            const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${randomText}&size=200x200`;
+
+            qrCodeContainer.innerHTML = `<img src="${qrCodeUrl}" alt="QR Code">`;
+        }
+
+        // Generate QR code initially
+        generateQRCode();
+
+        // Change QR code every 2 seconds
+        setInterval(generateQRCode, 2000);
+    </script>
+
+
+
+
+
+</body>
+
+</html>
